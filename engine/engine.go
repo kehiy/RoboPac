@@ -80,8 +80,8 @@ func newBotEngine(cm *client.Mgr, _ wallet.IWallet, _ *database.DB, _ []string,
 		Name:        "robopac",
 		Desc:        "RoboPAC",
 		Help:        "RoboPAC Help",
-		AppIDs:      []command.AppID{command.AppIdCLI, command.AppIdDiscord},
-		SubCommands: make([]command.Command, 2),
+		AppIDs:      []command.AppID{command.AppIdCLI, command.AppIdDiscord, command.AppIdTelegram},
+		SubCommands: []command.Command{},
 	}
 
 	netCmd := network.NewNetwork(ctx, cm)
